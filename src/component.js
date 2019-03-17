@@ -99,7 +99,7 @@ export default {
     onInput(event) {
       // Lets wait for DOM to be updated
       this.$nextTick(() => {
-        this.$emit('input', event.target.value);
+        event.target && this.$emit('input', event.target.value);
       });
     },
 
